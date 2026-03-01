@@ -31,10 +31,11 @@ class BBS(BaseHTTPRequestHandler):
 バグったらkeitaへ報告ください</p>
 <h3 style="padding:12px; border-bottom:1px solid black;">アクティブなスレ一覧</h3>
             """
-            +
-            for i in range(surez.length):
-                """<a href="""+surez[i][1]+""">"""+surez[i][0]+"""</a>"""
-            """
+            
+            for i in range(len(surez)):
+                html +="""<a href="""+surez[i][1]+""">"""+surez[i][0]+"""</a><br>"""
+            
+            html += """
             </div>
             </body>
             </html>
